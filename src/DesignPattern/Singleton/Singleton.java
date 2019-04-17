@@ -1,9 +1,9 @@
 package DesignPattern.Singleton;
 
 public class Singleton {
-    Singleton obj;
+    private static Singleton obj;
     private Singleton() {}
-    public Singleton getInstance() {
+    public static Singleton getInstance() {
         if(obj==null) {
             synchronized(Singleton.class) {
                 if(obj==null) {
