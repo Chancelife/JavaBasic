@@ -56,8 +56,20 @@ public class LinkedList<E> {
     }
 
     public Node<E> remove(int index) {
-
-        size--;
+        if(index<0 || index>size)
+            throw new IndexOutOfBoundsException();
+        Node temp = head.next;
+        Node prev = head;
+        while(temp!=null && index>=0) {
+            if(index==0) {
+                prev.next = temp.next;
+                this.size--;
+                return temp;
+            }
+            prev = temp;
+            temp = temp.next;
+            index--;
+        }
         return null;
     }
 
