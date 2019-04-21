@@ -91,5 +91,4 @@ public class McFood {
         sb.append("remkar:").append(remark);
         return sb.toString();
     }
-
 }
