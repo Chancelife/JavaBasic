@@ -83,7 +83,13 @@ public class McFood {
     }
 
     public String toString() {
-        return this.
+        StringBuilder sb = new StringBuilder();
+        sb.append(dirnk.getDrinkName()).append("|");
+        sb.append(hamburger.getHamburgName()).append("|");
+        sb.append("togo:").append(this.toGo).append("|");
+        sb.append("total:").append(this.totalCound).append("|");
+        sb.append("remkar:").append(remark);
+        return sb.toString();
     }
 
 }
